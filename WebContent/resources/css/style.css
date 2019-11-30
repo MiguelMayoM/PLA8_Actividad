@@ -1,0 +1,58 @@
+@charset "utf-8";
+html {
+	min-width: 800px; }
+.container {
+	min-width: 720px; }
+
+.form-group label {
+	display: block; }
+.form-group {
+	padding-bottom: 20px; }
+	/* Para el teléfono hay dos posibles errores y me mete un <br> ... Si hubiera
+		 puesto los mensajes desde el validador, podría haberlos puesto en el misma línea*/
+.form-group:last-of-type {
+	padding-bottom: 40px; }
+		
+input.form-control {
+	display: inline-block; 
+	width: 94%; }
+input + span:after {
+	display: inline-block;
+	width: 100%;
+	vertical-align: middle;
+	text-align:right; }
+input:invalid + span:after {
+	content: "✖";
+  color: red; }
+input:valid + span:after {
+  content: "✓";
+  color: green; }
+input:placeholder-shown + span:after{
+	visibility: hidden; }
+.form-control {
+	color: black; }
+.form-control::placeholder {
+	color: #aaa; }
+
+.validacion.form-control {
+	display: inline-block;
+	width: 5%;
+	padding: 0;
+	vertical-align: middle;
+	border: none; }
+
+.obligatorioUno {
+	color: orange; }
+		
+.error {
+	position: absolute;
+	display: block;
+	color:red; }
+
+/* Clearfix para "limpiar el float" y que la imagen no sobresalga hacia abajo
+	 del div jumbotron en algunos casos que sí lo hacía*/
+.jumbotron::after{
+	content:" ";
+	display: block;
+	clear: both; }
+	
